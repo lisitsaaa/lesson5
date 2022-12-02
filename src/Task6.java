@@ -29,12 +29,12 @@ public class Task6 {
             isSort = true;
             for (int i = 0; i < array.length - 1; i++) {
                 for (int j = 0; j < array[i].length - 1; j++) {
-                    if (array[i][j] > array[i + 1][j + 1]) {
+                    if (array[i][j] > array[i][j + 1]) {
                         isSort = false;
 
                         int res = array[i][j];
-                        array[i][j] = array[i + 1][j + 1];
-                        array[i + 1][j + 1] = res;
+                        array[i][j] = array[i][j + 1];
+                        array[i][j + 1] = res;
                     }
                     System.out.print(array[i][j] + " ");
                 }
