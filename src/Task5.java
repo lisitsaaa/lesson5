@@ -7,9 +7,17 @@ public class Task5 {
         Random random = new Random();
 
         System.out.print("Enter i = ");
+        while (!input.hasNextInt()) {
+            System.out.println("you need to enter a number!!! try again :)");
+            input.nextLine();
+        }
         int line = input.nextInt();
 
         System.out.print("Enter j = ");
+        while (!input.hasNextInt()) {
+            System.out.println("you need to enter a number!!! try again :)");
+            input.nextLine();
+        }
         int column = input.nextInt();
 
         int[][] array = new int[line][column];
