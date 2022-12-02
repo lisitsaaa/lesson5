@@ -13,6 +13,7 @@ public class Task6 {
 
         System.out.print("Enter j = ");
         int column = input.nextInt();
+        System.out.println();
 
         int[][] array = new int[line][column];
 
@@ -26,18 +27,31 @@ public class Task6 {
 
         System.out.println();
 
-        for (int i = 0; i < array.length - 1; i++) {
-            for (int j = 0; j < array[i].length - 1; j++) {
-                if (array[i][j] > array[i][j + 1]) {
-
-                    int res = array[i][j];
-                    array[i][j] = array[i][j + 1];
-                    array[i][j + 1] = res;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                for (int k = 0; k < array.length; k++) {
+                    if (array[i][j] < array[i][k]) {
+                        int res = array[i][j];
+                        array[i][j] = array[i][k];
+                        array[i][k] = res;
+                    }
                 }
-                System.out.print(array[i][j] + " ");
             }
-            System.out.println();
         }
+        System.out.println(Arrays.deepToString(array));
+
+//        for (int i = 0; i < array.length - 1; i++) {
+//            for (int j = 0; j < array[i].length - 1; j++) {
+//                if (array[i][j] > array[i][j + 1]) {
+//
+//                    int res = array[i][j];
+//                    array[i][j] = array[i][j + 1];
+//                    array[i][j + 1] = res;
+//                }
+//                System.out.print(array[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
 
     }
 }
