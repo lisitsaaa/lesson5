@@ -6,13 +6,21 @@ public class Task6 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Random random = new Random();
-        boolean isSort = false;
 
         System.out.print("Enter i = ");
+        while (!input.hasNextInt()) {
+            System.out.println("you need to enter a number!!! try again :)");
+            input.nextLine();
+        }
         int line = input.nextInt();
 
         System.out.print("Enter j = ");
+        while (!input.hasNextInt()) {
+            System.out.println("you need to enter a number!!! try again :)");
+            input.nextLine();
+        }
         int column = input.nextInt();
+
         System.out.println();
 
         int[][] array = new int[line][column];
@@ -39,20 +47,6 @@ public class Task6 {
             }
         }
         System.out.println(Arrays.deepToString(array));
-
-//        for (int i = 0; i < array.length - 1; i++) {
-//            for (int j = 0; j < array[i].length - 1; j++) {
-//                if (array[i][j] > array[i][j + 1]) {
-//
-//                    int res = array[i][j];
-//                    array[i][j] = array[i][j + 1];
-//                    array[i][j + 1] = res;
-//                }
-//                System.out.print(array[i][j] + " ");
-//            }
-//            System.out.println();
-//        }
-
     }
 }
 
