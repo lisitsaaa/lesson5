@@ -32,8 +32,12 @@ public class Task5 {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 if (i == j) {
-                    System.out.print("diagonal [" + i + "] -> " + array[i][j]);
+                    System.out.println("diagonal 1 -> " + array[i][j]);
                 }
+                if (i + j == array.length - 1) {
+                    System.out.println("diagonal 2 -> " + array[i][array.length - 1 - i]);
+                }
+
             }
             System.out.println();
         }
